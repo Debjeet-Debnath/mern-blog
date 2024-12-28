@@ -15,8 +15,8 @@ export default function Header() {
       <TextInput 
         type='text'
         placeholder='Search...'
-      rightIcon={AiOutlineSearch}
-      className='hidden lg:inline'
+        rightIcon={AiOutlineSearch}
+       className='hidden lg:inline'
       />
        </form>  
        <Button className='w-12 h-10 lg:hidden' color='gray' pill>
@@ -27,7 +27,7 @@ export default function Header() {
           <FaMoon/>
         </Button>
         <Link to='/sign-in'>
-          <Button gradientDuoTone='purpleToBlue'>
+          <Button gradientDuoTone='purpleToBlue' outline>
             Sign In
           </Button>
         </Link>
