@@ -29,3 +29,15 @@ app.use('/api/user', userRoutes);
 
 //signup
 app.use('/api/auth', authRoutes);
+
+//middle ware to handle error that we get frmo the input
+app.use((err, req, res, next) => {
+        const statusCode = err.statusCode || 500;
+        const message = err.message || 'Internal Server Error';
+        res.status(statusCode).json(
+            {
+            success: false,
+            statusCode,
+            message
+        });
+});
